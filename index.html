@@ -428,22 +428,28 @@
       </article>
     </section>
 
-    <footer>© 2026 Poti: Plant Care · Jingyeong Hong</footer>
+    <footer>
+      © 2026 Poti: Plant Care · Jingyeong Hong ·
+      <a id="delete-account-link" href="./delete-account/">Delete account and data</a>
+    </footer>
   </main>
 
   <script>
     const labels = {
       en: {
         title: "Privacy Policy",
-        meta: "Effective date: August 18, 2026 · Last updated: August 18, 2026"
+        meta: "Effective date: August 18, 2026 · Last updated: August 18, 2026",
+        deleteAccount: "Delete account and data"
       },
       de: {
         title: "Datenschutzerklärung",
-        meta: "Gültig ab: 18. August 2026 · Letzte Aktualisierung: 18. August 2026"
+        meta: "Gültig ab: 18. August 2026 · Letzte Aktualisierung: 18. August 2026",
+        deleteAccount: "Konto und Daten löschen"
       },
       ko: {
         title: "개인정보처리방침",
-        meta: "최초 시행일: 2026년 8월 18일 · 최종 업데이트: 2026년 8월 18일"
+        meta: "최초 시행일: 2026년 8월 18일 · 최종 업데이트: 2026년 8월 18일",
+        deleteAccount: "계정 및 데이터 삭제"
       }
     };
 
@@ -453,6 +459,7 @@
       document.documentElement.lang = lang;
       document.getElementById("page-title").textContent = labels[lang].title;
       document.getElementById("page-meta").textContent = labels[lang].meta;
+      document.getElementById("delete-account-link").textContent = labels[lang].deleteAccount;
 
       document.querySelectorAll(".lang-panel").forEach(panel => {
         panel.hidden = panel.id !== `panel-${lang}`;
@@ -484,3 +491,4 @@
   </script>
 </body>
 </html>
+
